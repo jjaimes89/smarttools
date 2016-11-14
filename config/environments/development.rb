@@ -47,7 +47,7 @@ ENV["SES_SMTP_PASSWORD"] = "PASS_SMTP"
     authentication:       :login,
     enable_starttls_auto: true  }
   
- endpoint    = "stools.judgr1.cfg.use1.cache.amazonaws.com:11211"
+ endpoint    = "path_endpoint_in.amazonaws.com:11211"
  elasticache = Dalli::ElastiCache.new(endpoint)
  config.cache_store = :dalli_store, elasticache.servers, {:expires_in => 1.day, :compress => true}
 
