@@ -1,0 +1,62 @@
+<div class="row center-xs">
+<div class="col-xs-9 col-md-5">
+<div  class="box text-left">
+
+<font color="green">
+ <h1>Bienvenido a miVideo</h1></font>
+
+<% if user_signed_in? %>
+<h3>
+  Administrador: <%= current_user.name %><br>
+  Correo: <%= current_user.email %><br>
+   
+</h3>
+<%end%>
+
+
+ <h2> Podras subir tus videos y concursar con ellos </h2>
+
+<p> Si eres administrador: Para crear sus concurso(s) debe contar con una cuenta registrada, 
+  Una vez la cuenta ha sido creada el administrador puede proceder a configurar los concursos de video
+  que esa empresa desea ofrecer a sus clientes. 
+
+ Por cada concurso publicado el sistema le genera una URL única (que puede ser cambiada por el administrador), la cual el administrador puede publicar en TV, su portal Web o enviar a sus clientes a través de email para que estos puedan entrar y subir los videos a cada concurso, los cuales deben estar relacionados con los productos vendidos u ofrecidos por lempresa.
+
+Los videos serán revisados por el equipo de marketing de la empresa y el mejor video
+ganará un fabuloso premio.</br>
+</p>
+
+<h3>Suscríbete a este sitio para poder generar el concurso de video que desee o visita los videos de otros usuarios en la pestaña "Concursos".</h3>
+<% unless user_signed_in? %>
+<h4>
+ 
+<li class="col-md" >
+<%= link_to "Iniciar Sesión", new_user_session_path,  class:"btn" %>
+</li>
+
+<li class="col-md" >
+
+<%= link_to "Crear cuenta", new_user_registration_path,  class:"btn" %>
+
+</li>
+
+ </h4>
+<%end%>
+
+ 
+
+
+<div class="col-md-14">
+                    <p>
+                   <strong>Developed by:</strong> German Cely y Jefferson Jaimes  <br />
+                 <strong>Email:</strong>  j.jaimes@uniandes.edu.co gcely@uniandes.edu.co <br />
+                          <strong>Web:</strong>  www.smarttools.com <br />
+                         <strong>Mobile:</strong>  +00-909-808-707-00<br />
+                           </p>
+                </div>
+
+ 
+</div>
+	
+</div>
+</div>

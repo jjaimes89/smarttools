@@ -1,0 +1,39 @@
+
+<div class="row center-xs">
+<div class="col-xs-10 col-md-5">
+<div  class="box text-left">
+
+<%= jwplayer_assets %>
+
+<p>
+  <strong>Nombres:</strong>
+  <%= @archivo.nombres %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @archivo.email %>
+</p>
+
+
+<p>
+  <strong>Video:</strong>
+  <%= @archivo.video %>
+</p>
+
+<p>
+  <strong>Mensaje:</strong>
+  <%= @archivo.mensaje %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @archivo.estado %>
+</p>
+
+<%= link_to 'Edit', edit_archivo_path(@archivo) %> |
+<%= link_to 'Back', archivos_path %>
+
+  </div> 
+    </div> 
+    </div>

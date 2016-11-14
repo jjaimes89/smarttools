@@ -1,0 +1,3242 @@
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+consultando video por id
+rake aborted!
+Mongoid::Errors::DocumentNotFound: 
+message:
+  Document(s) not found for class Archivo with id(s) 5802a96b77388b539ebf7191.
+summary:
+  When calling Archivo.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): 5802a96b77388b539ebf7191 ... (1 total) and the following ids were not found: 5802a96b77388b539ebf7191.
+resolution:
+  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/mongoid-6.0.0/lib/mongoid/criteria.rb:457:in `check_for_missing_documents!'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/mongoid-6.0.0/lib/mongoid/criteria/findable.rb:20:in `execute_or_raise'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/mongoid-6.0.0/lib/mongoid/criteria/findable.rb:40:in `find'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/mongoid-6.0.0/lib/mongoid/findable.rb:94:in `find'
+/home/ubuntu/smarttools/app/helpers/videos_helper.rb:20:in `convert_videos'
+/home/ubuntu/smarttools/lib/tasks/convertir_videos.rake:16:in `block in <top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/rake-11.3.0/exe/rake:27:in `<top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `eval'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => convertir_videos
+(See full trace by running task with --trace)
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+consultando video por id
+video: 5802aa5f77388b539ebf7194
+#<Fog::Storage::AWS::Directory:0x00000006104220>
+https://smartools-videosd.s3.amazonaws.com/uploads/5802aa5f77388b539ebf7194/test4.mpg
+https://smartools-videosd.s3.amazonaws.com/uploads/5802aa5f77388b539ebf7194/test4.mpg
+cargo el video a convertir ...
+valido la ruta ...
+I, [2016-10-15T22:20:05.660029 #31128]  INFO -- : Running transcoding...
+["/usr/bin/ffmpeg", "-y", "-i", "https://smartools-videosd.s3.amazonaws.com/uploads/5802aa5f77388b539ebf7194/test4.mpg", "-vcodec", "libx264", "-acodec", "aac", "-strict", "-2", "/home/ubuntu/smarttools/public/uploads/archivo/convertidos/5802aa5f77388b539ebf7194.mp4"]
+
+0.0
+0.18471943958963866
+0.38862128252127826
+0.5754721002600282
+0.7651647555309262
+0.9882490018045669
+1.0
+I, [2016-10-15T22:20:09.391025 #31128]  INFO -- : Transcoding of https://smartools-videosd.s3.amazonaws.com/uploads/5802aa5f77388b539ebf7194/test4.mpg to /home/ubuntu/smarttools/public/uploads/archivo/convertidos/5802aa5f77388b539ebf7194.mp4 succeeded
+
+termino la conversion ...
+entro a guardar en S3
+[fog][WARNING] fog: the specified s3 bucket name(smartools-videosd/uploads/convertidos) is not a valid dns name, which will negatively impact performance.  For details see: http://docs.amazonwebservices.com/AmazonS3/latest/dev/BucketRestrictions.html
+[fog][WARNING] fog: the specified s3 bucket name(smartools-videosd/uploads/convertidos) is not a valid dns name, which will negatively impact performance.  For details see: http://docs.amazonwebservices.com/AmazonS3/latest/dev/BucketRestrictions.html
+guardo en S3
+guardo la informacion en BD
+rake aborted!
+NameError: undefined local variable or method `video' for VideosHelper:Module
+Did you mean?  @video
+/home/ubuntu/smarttools/app/helpers/videos_helper.rb:68:in `convert_videos'
+/home/ubuntu/smarttools/lib/tasks/convertir_videos.rake:16:in `block in <top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/rake-11.3.0/exe/rake:27:in `<top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `eval'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => convertir_videos
+(See full trace by running task with --trace)
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+consultando video por id
+video: 5802ace677388b539ebf7197
+#<Fog::Storage::AWS::Directory:0x00000006171e60>
+https://smartools-videosd.s3.amazonaws.com/uploads/5802ace677388b539ebf7197/test5.mpg
+https://smartools-videosd.s3.amazonaws.com/uploads/5802ace677388b539ebf7197/test5.mpg
+cargo el video a convertir ...
+valido la ruta ...
+I, [2016-10-15T22:26:06.125977 #31354]  INFO -- : Running transcoding...
+["/usr/bin/ffmpeg", "-y", "-i", "https://smartools-videosd.s3.amazonaws.com/uploads/5802ace677388b539ebf7197/test5.mpg", "-vcodec", "libx264", "-acodec", "aac", "-strict", "-2", "/home/ubuntu/smarttools/public/uploads/archivo/convertidos/5802ace677388b539ebf7197.mp4"]
+
+0.0
+0.1918240334200094
+0.3999886326498714
+0.5896812879207696
+0.7793739431916678
+0.9882490018045669
+1.0
+I, [2016-10-15T22:26:09.683974 #31354]  INFO -- : Transcoding of https://smartools-videosd.s3.amazonaws.com/uploads/5802ace677388b539ebf7197/test5.mpg to /home/ubuntu/smarttools/public/uploads/archivo/convertidos/5802ace677388b539ebf7197.mp4 succeeded
+
+termino la conversion ...
+entro a guardar en S3
+[fog][WARNING] fog: the specified s3 bucket name(smartools-videosd/uploads/convertidos) is not a valid dns name, which will negatively impact performance.  For details see: http://docs.amazonwebservices.com/AmazonS3/latest/dev/BucketRestrictions.html
+[fog][WARNING] fog: the specified s3 bucket name(smartools-videosd/uploads/convertidos) is not a valid dns name, which will negatively impact performance.  For details see: http://docs.amazonwebservices.com/AmazonS3/latest/dev/BucketRestrictions.html
+guardo en S3
+guardo la informacion en BD
+rake aborted!
+NameError: undefined local variable or method `video' for VideosHelper:Module
+Did you mean?  @video
+/home/ubuntu/smarttools/app/helpers/videos_helper.rb:68:in `convert_videos'
+/home/ubuntu/smarttools/lib/tasks/convertir_videos.rake:16:in `block in <top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/rake-11.3.0/exe/rake:27:in `<top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `eval'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => convertir_videos
+(See full trace by running task with --trace)
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+consultando video por id
+video: 5802ace677388b539ebf7197
+#<Fog::Storage::AWS::Directory:0x00000005ed3e88>
+https://smartools-videosd.s3.amazonaws.com/uploads/5802ace677388b539ebf7197/test5.mpg
+https://smartools-videosd.s3.amazonaws.com/uploads/5802ace677388b539ebf7197/test5.mpg
+cargo el video a convertir ...
+valido la ruta ...
+I, [2016-10-15T22:28:05.948011 #31437]  INFO -- : Running transcoding...
+["/usr/bin/ffmpeg", "-y", "-i", "https://smartools-videosd.s3.amazonaws.com/uploads/5802ace677388b539ebf7197/test5.mpg", "-vcodec", "libx264", "-acodec", "aac", "-strict", "-2", "/home/ubuntu/smarttools/public/uploads/archivo/convertidos/5802ace677388b539ebf7197.mp4"]
+
+0.0
+0.1918240334200094
+0.39785725450076015
+0.5825766940903988
+0.7751111868934453
+0.9882490018045669
+1.0
+I, [2016-10-15T22:28:09.539763 #31437]  INFO -- : Transcoding of https://smartools-videosd.s3.amazonaws.com/uploads/5802ace677388b539ebf7197/test5.mpg to /home/ubuntu/smarttools/public/uploads/archivo/convertidos/5802ace677388b539ebf7197.mp4 succeeded
+
+termino la conversion ...
+entro a guardar en S3
+[fog][WARNING] fog: the specified s3 bucket name(smartools-videosd/uploads/convertidos) is not a valid dns name, which will negatively impact performance.  For details see: http://docs.amazonwebservices.com/AmazonS3/latest/dev/BucketRestrictions.html
+[fog][WARNING] fog: the specified s3 bucket name(smartools-videosd/uploads/convertidos) is not a valid dns name, which will negatively impact performance.  For details see: http://docs.amazonwebservices.com/AmazonS3/latest/dev/BucketRestrictions.html
+guardo en S3
+guardo la informacion en BD
+rake aborted!
+NameError: undefined local variable or method `video' for VideosHelper:Module
+Did you mean?  @video
+/home/ubuntu/smarttools/app/helpers/videos_helper.rb:68:in `convert_videos'
+/home/ubuntu/smarttools/lib/tasks/convertir_videos.rake:16:in `block in <top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/rake-11.3.0/exe/rake:27:in `<top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `eval'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => convertir_videos
+(See full trace by running task with --trace)
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+consultando video por id
+video: 5802ace677388b539ebf7197
+#<Fog::Storage::AWS::Directory:0x0000000768bda0>
+https://smartools-videosd.s3.amazonaws.com/uploads/5802ace677388b539ebf7197/test5.mpg
+https://smartools-videosd.s3.amazonaws.com/uploads/5802ace677388b539ebf7197/test5.mpg
+cargo el video a convertir ...
+valido la ruta ...
+I, [2016-10-15T22:30:06.610394 #31520]  INFO -- : Running transcoding...
+["/usr/bin/ffmpeg", "-y", "-i", "https://smartools-videosd.s3.amazonaws.com/uploads/5802ace677388b539ebf7197/test5.mpg", "-vcodec", "libx264", "-acodec", "aac", "-strict", "-2", "/home/ubuntu/smarttools/public/uploads/archivo/convertidos/5802ace677388b539ebf7197.mp4"]
+
+0.0
+0.19395541156912058
+0.4028304701820197
+0.5896812879207696
+0.7772425650425565
+0.9882490018045669
+1.0
+I, [2016-10-15T22:30:10.194604 #31520]  INFO -- : Transcoding of https://smartools-videosd.s3.amazonaws.com/uploads/5802ace677388b539ebf7197/test5.mpg to /home/ubuntu/smarttools/public/uploads/archivo/convertidos/5802ace677388b539ebf7197.mp4 succeeded
+
+termino la conversion ...
+entro a guardar en S3
+[fog][WARNING] fog: the specified s3 bucket name(smartools-videosd/uploads/convertidos) is not a valid dns name, which will negatively impact performance.  For details see: http://docs.amazonwebservices.com/AmazonS3/latest/dev/BucketRestrictions.html
+[fog][WARNING] fog: the specified s3 bucket name(smartools-videosd/uploads/convertidos) is not a valid dns name, which will negatively impact performance.  For details see: http://docs.amazonwebservices.com/AmazonS3/latest/dev/BucketRestrictions.html
+guardo en S3
+guardo la informacion en BD
+rake aborted!
+NameError: undefined local variable or method `video' for VideosHelper:Module
+Did you mean?  @video
+/home/ubuntu/smarttools/app/helpers/videos_helper.rb:68:in `convert_videos'
+/home/ubuntu/smarttools/lib/tasks/convertir_videos.rake:16:in `block in <top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/rake-11.3.0/exe/rake:27:in `<top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `eval'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => convertir_videos
+(See full trace by running task with --trace)
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+consultando video por id
+video: 5802ace677388b539ebf7197
+#<Fog::Storage::AWS::Directory:0x00000007a8ead8>
+https://smartools-videosd.s3.amazonaws.com/uploads/5802ace677388b539ebf7197/test5.mpg
+https://smartools-videosd.s3.amazonaws.com/uploads/5802ace677388b539ebf7197/test5.mpg
+cargo el video a convertir ...
+valido la ruta ...
+I, [2016-10-15T22:34:06.054516 #31674]  INFO -- : Running transcoding...
+["/usr/bin/ffmpeg", "-y", "-i", "https://smartools-videosd.s3.amazonaws.com/uploads/5802ace677388b539ebf7197/test5.mpg", "-vcodec", "libx264", "-acodec", "aac", "-strict", "-2", "/home/ubuntu/smarttools/public/uploads/archivo/convertidos/5802ace677388b539ebf7197.mp4"]
+
+0.0
+0.18685081773874987
+0.3928840388195007
+0.5825766940903988
+0.7751111868934453
+0.9882490018045669
+1.0
+I, [2016-10-15T22:34:09.614364 #31674]  INFO -- : Transcoding of https://smartools-videosd.s3.amazonaws.com/uploads/5802ace677388b539ebf7197/test5.mpg to /home/ubuntu/smarttools/public/uploads/archivo/convertidos/5802ace677388b539ebf7197.mp4 succeeded
+
+termino la conversion ...
+entro a guardar en S3
+[fog][WARNING] fog: the specified s3 bucket name(smartools-videosd/uploads/convertidos) is not a valid dns name, which will negatively impact performance.  For details see: http://docs.amazonwebservices.com/AmazonS3/latest/dev/BucketRestrictions.html
+[fog][WARNING] fog: the specified s3 bucket name(smartools-videosd/uploads/convertidos) is not a valid dns name, which will negatively impact performance.  For details see: http://docs.amazonwebservices.com/AmazonS3/latest/dev/BucketRestrictions.html
+guardo en S3
+guardo la informacion en BD
+envio el correo
+Digest::Digest is deprecated; use Digest
+se borro reg de la cola
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+consultando video por id
+video: 5802af3277388b539ebf719a
+#<Fog::Storage::AWS::Directory:0x00000007bfa048>
+https://smartools-videosd.s3.amazonaws.com/uploads/5802af3277388b539ebf719a/test6.mpg
+https://smartools-videosd.s3.amazonaws.com/uploads/5802af3277388b539ebf719a/test6.mpg
+cargo el video a convertir ...
+valido la ruta ...
+I, [2016-10-15T22:36:06.576780 #31761]  INFO -- : Running transcoding...
+["/usr/bin/ffmpeg", "-y", "-i", "https://smartools-videosd.s3.amazonaws.com/uploads/5802af3277388b539ebf719a/test6.mpg", "-vcodec", "libx264", "-acodec", "aac", "-strict", "-2", "/home/ubuntu/smarttools/public/uploads/archivo/convertidos/5802af3277388b539ebf719a.mp4"]
+
+0.0
+0.18685081773874987
+0.3928840388195007
+0.5825766940903988
+0.7793739431916678
+0.9882490018045669
+1.0
+I, [2016-10-15T22:36:10.414910 #31761]  INFO -- : Transcoding of https://smartools-videosd.s3.amazonaws.com/uploads/5802af3277388b539ebf719a/test6.mpg to /home/ubuntu/smarttools/public/uploads/archivo/convertidos/5802af3277388b539ebf719a.mp4 succeeded
+
+termino la conversion ...
+entro a guardar en S3
+[fog][WARNING] fog: the specified s3 bucket name(smartools-videosd/uploads/convertidos) is not a valid dns name, which will negatively impact performance.  For details see: http://docs.amazonwebservices.com/AmazonS3/latest/dev/BucketRestrictions.html
+[fog][WARNING] fog: the specified s3 bucket name(smartools-videosd/uploads/convertidos) is not a valid dns name, which will negatively impact performance.  For details see: http://docs.amazonwebservices.com/AmazonS3/latest/dev/BucketRestrictions.html
+guardo en S3
+guardo la informacion en BD
+envio el correo
+Digest::Digest is deprecated; use Digest
+se borro reg de la cola
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+consultando video por id
+video: 5802db6877388b539ebf719b
+#<Fog::Storage::AWS::Directory:0x000000073e5150>
+https://smartools-videosd.s3.amazonaws.com/uploads/5802db6877388b539ebf719b/test7.mpg
+https://smartools-videosd.s3.amazonaws.com/uploads/5802db6877388b539ebf719b/test7.mpg
+cargo el video a convertir ...
+valido la ruta ...
+I, [2016-10-16T01:46:05.963161 #6190]  INFO -- : Running transcoding...
+["/usr/bin/ffmpeg", "-y", "-i", "https://smartools-videosd.s3.amazonaws.com/uploads/5802db6877388b539ebf719b/test7.mpg", "-vcodec", "libx264", "-acodec", "aac", "-strict", "-2", "/home/ubuntu/smarttools/public/uploads/archivo/convertidos/5802db6877388b539ebf719b.mp4"]
+
+0.0
+0.1918240334200094
+0.395725876351649
+0.5783139377921764
+0.7680065930630746
+0.9882490018045669
+1.0
+I, [2016-10-16T01:46:09.561175 #6190]  INFO -- : Transcoding of https://smartools-videosd.s3.amazonaws.com/uploads/5802db6877388b539ebf719b/test7.mpg to /home/ubuntu/smarttools/public/uploads/archivo/convertidos/5802db6877388b539ebf719b.mp4 succeeded
+
+termino la conversion ...
+entro a guardar en S3
+[fog][WARNING] fog: the specified s3 bucket name(smartools-videosd/uploads/convertidos) is not a valid dns name, which will negatively impact performance.  For details see: http://docs.amazonwebservices.com/AmazonS3/latest/dev/BucketRestrictions.html
+[fog][WARNING] fog: the specified s3 bucket name(smartools-videosd/uploads/convertidos) is not a valid dns name, which will negatively impact performance.  For details see: http://docs.amazonwebservices.com/AmazonS3/latest/dev/BucketRestrictions.html
+guardo en S3
+guardo la informacion en BD
+envio el correo
+Digest::Digest is deprecated; use Digest
+se borro reg de la cola
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+rake aborted!
+Errno::ETIMEDOUT: Connection timed out - connect(2) for "smarttools-cache.judgr1.0001.use1.cache.amazonaws.com" port 6379
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:64:in `initialize'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:64:in `new'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:64:in `remote_command'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:47:in `get_stats_from_remote'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:27:in `stats'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:37:in `engine_version'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:52:in `get_config_from_remote'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:32:in `config'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache.rb:37:in `servers'
+/home/ubuntu/smarttools/config/environments/development.rb:52:in `block in <top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/railtie.rb:209:in `instance_eval'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/railtie.rb:209:in `configure'
+/home/ubuntu/smarttools/config/environments/development.rb:1:in `<top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `block in require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:259:in `load_dependency'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:600:in `block (2 levels) in <class:Engine>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:599:in `each'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:599:in `block in <class:Engine>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:30:in `instance_exec'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:30:in `run'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:55:in `block in run_initializers'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:44:in `each'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:44:in `tsort_each_child'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:54:in `run_initializers'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/application.rb:352:in `initialize!'
+/home/ubuntu/smarttools/config/environment.rb:6:in `<top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `block in require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:259:in `load_dependency'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/application.rb:328:in `require_environment!'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/application.rb:448:in `block in run_tasks_blocks'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/rake-11.3.0/exe/rake:27:in `<top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `eval'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => convertir_videos => environment
+(See full trace by running task with --trace)
+rake aborted!
+Errno::ETIMEDOUT: Connection timed out - connect(2) for "smarttools-cache.judgr1.0001.use1.cache.amazonaws.com" port 6379
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:64:in `initialize'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:64:in `new'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:64:in `remote_command'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:47:in `get_stats_from_remote'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:27:in `stats'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:37:in `engine_version'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:52:in `get_config_from_remote'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:32:in `config'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache.rb:37:in `servers'
+/home/ubuntu/smarttools/config/environments/development.rb:52:in `block in <top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/railtie.rb:209:in `instance_eval'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/railtie.rb:209:in `configure'
+/home/ubuntu/smarttools/config/environments/development.rb:1:in `<top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `block in require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:259:in `load_dependency'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:600:in `block (2 levels) in <class:Engine>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:599:in `each'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:599:in `block in <class:Engine>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:30:in `instance_exec'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:30:in `run'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:55:in `block in run_initializers'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:44:in `each'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:44:in `tsort_each_child'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:54:in `run_initializers'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/application.rb:352:in `initialize!'
+/home/ubuntu/smarttools/config/environment.rb:6:in `<top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `block in require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:259:in `load_dependency'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/application.rb:328:in `require_environment!'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/application.rb:448:in `block in run_tasks_blocks'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/rake-11.3.0/exe/rake:27:in `<top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `eval'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => convertir_videos => environment
+(See full trace by running task with --trace)
+rake aborted!
+Errno::ETIMEDOUT: Connection timed out - connect(2) for "smarttools-cache.judgr1.0001.use1.cache.amazonaws.com" port 6379
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:64:in `initialize'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:64:in `new'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:64:in `remote_command'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:47:in `get_stats_from_remote'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:27:in `stats'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:37:in `engine_version'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:52:in `get_config_from_remote'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:32:in `config'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache.rb:37:in `servers'
+/home/ubuntu/smarttools/config/environments/development.rb:52:in `block in <top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/railtie.rb:209:in `instance_eval'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/railtie.rb:209:in `configure'
+/home/ubuntu/smarttools/config/environments/development.rb:1:in `<top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `block in require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:259:in `load_dependency'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:600:in `block (2 levels) in <class:Engine>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:599:in `each'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:599:in `block in <class:Engine>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:30:in `instance_exec'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:30:in `run'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:55:in `block in run_initializers'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:44:in `each'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:44:in `tsort_each_child'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:54:in `run_initializers'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/application.rb:352:in `initialize!'
+/home/ubuntu/smarttools/config/environment.rb:6:in `<top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `block in require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:259:in `load_dependency'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/application.rb:328:in `require_environment!'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/application.rb:448:in `block in run_tasks_blocks'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/rake-11.3.0/exe/rake:27:in `<top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `eval'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => convertir_videos => environment
+(See full trace by running task with --trace)
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+rake aborted!
+SocketError: getaddrinfo: Name or service not known
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:64:in `initialize'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:64:in `new'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:64:in `remote_command'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:47:in `get_stats_from_remote'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:27:in `stats'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:37:in `engine_version'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:52:in `get_config_from_remote'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:32:in `config'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache.rb:37:in `servers'
+/home/ubuntu/smarttools/config/environments/development.rb:52:in `block in <top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/railtie.rb:209:in `instance_eval'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/railtie.rb:209:in `configure'
+/home/ubuntu/smarttools/config/environments/development.rb:1:in `<top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `block in require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:259:in `load_dependency'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:600:in `block (2 levels) in <class:Engine>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:599:in `each'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:599:in `block in <class:Engine>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:30:in `instance_exec'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:30:in `run'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:55:in `block in run_initializers'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:44:in `each'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:44:in `tsort_each_child'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:54:in `run_initializers'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/application.rb:352:in `initialize!'
+/home/ubuntu/smarttools/config/environment.rb:6:in `<top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `block in require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:259:in `load_dependency'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/application.rb:328:in `require_environment!'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/application.rb:448:in `block in run_tasks_blocks'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/rake-11.3.0/exe/rake:27:in `<top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `eval'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => convertir_videos => environment
+(See full trace by running task with --trace)
+rake aborted!
+SocketError: getaddrinfo: Name or service not known
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:64:in `initialize'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:64:in `new'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:64:in `remote_command'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:47:in `get_stats_from_remote'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:27:in `stats'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:37:in `engine_version'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:52:in `get_config_from_remote'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:32:in `config'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache.rb:37:in `servers'
+/home/ubuntu/smarttools/config/environments/development.rb:52:in `block in <top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/railtie.rb:209:in `instance_eval'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/railtie.rb:209:in `configure'
+/home/ubuntu/smarttools/config/environments/development.rb:1:in `<top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `block in require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:259:in `load_dependency'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:600:in `block (2 levels) in <class:Engine>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:599:in `each'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:599:in `block in <class:Engine>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:30:in `instance_exec'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:30:in `run'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:55:in `block in run_initializers'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:44:in `each'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:44:in `tsort_each_child'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:54:in `run_initializers'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/application.rb:352:in `initialize!'
+/home/ubuntu/smarttools/config/environment.rb:6:in `<top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `block in require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:259:in `load_dependency'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/application.rb:328:in `require_environment!'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/application.rb:448:in `block in run_tasks_blocks'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/rake-11.3.0/exe/rake:27:in `<top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `eval'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => convertir_videos => environment
+(See full trace by running task with --trace)
+rake aborted!
+Errno::ETIMEDOUT: Connection timed out - connect(2) for "stools.judgr1.cfg.use1.cache.amazonaws.com" port 11211
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:64:in `initialize'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:64:in `new'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:64:in `remote_command'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:47:in `get_stats_from_remote'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:27:in `stats'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:37:in `engine_version'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:52:in `get_config_from_remote'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:32:in `config'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache.rb:37:in `servers'
+/home/ubuntu/smarttools/config/environments/development.rb:52:in `block in <top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/railtie.rb:209:in `instance_eval'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/railtie.rb:209:in `configure'
+/home/ubuntu/smarttools/config/environments/development.rb:1:in `<top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `block in require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:259:in `load_dependency'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:600:in `block (2 levels) in <class:Engine>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:599:in `each'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:599:in `block in <class:Engine>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:30:in `instance_exec'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:30:in `run'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:55:in `block in run_initializers'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:44:in `each'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:44:in `tsort_each_child'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:54:in `run_initializers'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/application.rb:352:in `initialize!'
+/home/ubuntu/smarttools/config/environment.rb:6:in `<top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `block in require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:259:in `load_dependency'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/application.rb:328:in `require_environment!'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/application.rb:448:in `block in run_tasks_blocks'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/rake-11.3.0/exe/rake:27:in `<top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `eval'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => convertir_videos => environment
+(See full trace by running task with --trace)
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+rake aborted!
+SignalException: SIGTERM
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:68:in `readline'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:68:in `remote_command'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:47:in `get_stats_from_remote'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:27:in `stats'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:37:in `engine_version'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:52:in `get_config_from_remote'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:32:in `config'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache.rb:37:in `servers'
+/home/ubuntu/smarttools/config/environments/development.rb:52:in `block in <top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/railtie.rb:209:in `instance_eval'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/railtie.rb:209:in `configure'
+/home/ubuntu/smarttools/config/environments/development.rb:1:in `<top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `block in require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:259:in `load_dependency'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:600:in `block (2 levels) in <class:Engine>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:599:in `each'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:599:in `block in <class:Engine>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:30:in `instance_exec'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:30:in `run'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:55:in `block in run_initializers'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:44:in `each'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:44:in `tsort_each_child'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:54:in `run_initializers'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/application.rb:352:in `initialize!'
+/home/ubuntu/smarttools/config/environment.rb:6:in `<top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `block in require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:259:in `load_dependency'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/application.rb:328:in `require_environment!'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/application.rb:448:in `block in run_tasks_blocks'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/rake-11.3.0/exe/rake:27:in `<top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `eval'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => convertir_videos => environment
+(See full trace by running task with --trace)
+rake aborted!
+SignalException: SIGTERM
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:68:in `readline'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:68:in `remote_command'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:47:in `get_stats_from_remote'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:27:in `stats'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:37:in `engine_version'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:52:in `get_config_from_remote'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:32:in `config'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache.rb:37:in `servers'
+/home/ubuntu/smarttools/config/environments/development.rb:52:in `block in <top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/railtie.rb:209:in `instance_eval'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/railtie.rb:209:in `configure'
+/home/ubuntu/smarttools/config/environments/development.rb:1:in `<top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `block in require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:259:in `load_dependency'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:600:in `block (2 levels) in <class:Engine>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:599:in `each'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:599:in `block in <class:Engine>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:30:in `instance_exec'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:30:in `run'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:55:in `block in run_initializers'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:44:in `each'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:44:in `tsort_each_child'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:54:in `run_initializers'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/application.rb:352:in `initialize!'
+/home/ubuntu/smarttools/config/environment.rb:6:in `<top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `block in require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:259:in `load_dependency'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/application.rb:328:in `require_environment!'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/application.rb:448:in `block in run_tasks_blocks'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/rake-11.3.0/exe/rake:27:in `<top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `eval'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => convertir_videos => environment
+(See full trace by running task with --trace)
+rake aborted!
+SignalException: SIGTERM
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:68:in `readline'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:68:in `remote_command'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:47:in `get_stats_from_remote'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:27:in `stats'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:37:in `engine_version'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:52:in `get_config_from_remote'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache/auto_discovery/endpoint.rb:32:in `config'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/dalli-elasticache-0.2.0/lib/dalli/elasticache.rb:37:in `servers'
+/home/ubuntu/smarttools/config/environments/development.rb:52:in `block in <top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/railtie.rb:209:in `instance_eval'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/railtie.rb:209:in `configure'
+/home/ubuntu/smarttools/config/environments/development.rb:1:in `<top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `block in require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:259:in `load_dependency'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:600:in `block (2 levels) in <class:Engine>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:599:in `each'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:599:in `block in <class:Engine>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:30:in `instance_exec'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:30:in `run'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:55:in `block in run_initializers'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:44:in `each'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:44:in `tsort_each_child'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:54:in `run_initializers'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/application.rb:352:in `initialize!'
+/home/ubuntu/smarttools/config/environment.rb:6:in `<top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `block in require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:259:in `load_dependency'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:293:in `require'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/application.rb:328:in `require_environment!'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/application.rb:448:in `block in run_tasks_blocks'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/gems/rake-11.3.0/exe/rake:27:in `<top (required)>'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `eval'
+/home/ubuntu/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => convertir_videos => environment
+(See full trace by running task with --trace)
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest
+entro a la tarea
+entro al helper
+conectando con S3
+Digest::Digest is deprecated; use Digest

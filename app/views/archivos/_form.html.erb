@@ -1,0 +1,42 @@
+<%= form_for([@concurso, @archivo]) do |f| %>
+  <% if @archivo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@archivo.errors.count, "error") %> prohibited this archivo from being saved:</h2>
+
+      <ul>
+      <% @archivo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombres %>
+    <%= f.text_field :nombres %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :video %><br>
+    <%= f.file_field :video %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mensaje %>
+    <%= f.text_field :mensaje %>
+  </div>
+
+ 
+  <div class="actions">
+    <%= f.submit "Subir Video"%>
+
+
+  
+
+  </div>
+<% end %>

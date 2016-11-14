@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  namec: MyString
+  banner: MyString
+  url: MyString
+  fecha_inicio: 2016-09-03
+  fecha_fin: 2016-09-03
+  premio: MyText
+
+two:
+  namec: MyString
+  banner: MyString
+  url: MyString
+  fecha_inicio: 2016-09-03
+  fecha_fin: 2016-09-03
+  premio: MyText

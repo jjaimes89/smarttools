@@ -1,0 +1,65 @@
+
+<div class="row center-xs">
+<div class="col-xs-9 col-md-5">
+<div  class="box text-left">
+
+
+<%= form_for(@concurso) do |f| %>
+  <% if @concurso.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@concurso.errors.count, "error") %> prohibited this concurso from being saved:</h2>
+
+      <ul>
+      <% @concurso.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :namec %>
+    <%= f.text_field :namec, class:"form-control"%>
+  </div>
+
+  <div class="field">
+    <%= f.label :banner %>
+    <%= f.file_field :banner, class:"form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :url %>
+    <%= f.text_field  :url, class:"form-control" %>
+    
+  </div>
+
+
+  <div class="field">
+    <%= f.label :fecha_inicio  %>
+<%# si se usa f.date_select :fecha_inicio,  class:"form-control"  %>
+    <%= f.date_select :fecha_inicio,  class:"form-control" %>
+  </div>
+
+
+
+  <div class="field">
+    <%= f.label :fecha_fin  %>
+<%# si se usa f.date_select :fecha_fin,  class:"form-control"  %>
+    <%= f.date_select :fecha_fin ,  class:"form-control" %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :premio %>
+    <%= f.text_area :premio, class:"form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Crear el Concurso", class:"btn be-red white" %>
+  </div>
+
+<% end %>
+
+   </div>
+</div>
+</div>
