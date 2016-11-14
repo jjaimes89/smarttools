@@ -5,7 +5,7 @@ CarrierWave.configure do |config|
     :aws_secret_access_key  => 'AWS_PASS', 
     :region                 => 'us-west-2'
   }
-  config.fog_directory  = 'smartools-videosd'
+  config.fog_directory  = 'smartools-repo'
   config.fog_public     = true 
   config.storage = :fog
 end
