@@ -1,1 +1,0 @@
-json.array! @concursos, partial: 'concursos/concurso', as: :concurso

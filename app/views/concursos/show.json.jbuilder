@@ -1,1 +1,0 @@
-json.partial! "concursos/concurso", concurso: @concurso
